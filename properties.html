@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العقارات | EstateX</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div data-include="navbar.html"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">الرئيسية</a><span>›</span><span>العقارات</span></div>
+        <h1 class="page-title">العقارات المتاحة</h1>
+        <p class="page-subtitle">استعرض وحدات للبيع والإيجار بصور حقيقية وتصميم كروت احترافي وفلاتر بحث عملية.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="filters-bar property-filter-form" data-target="#propertiesGrid">
+        <div class="input-group"><span>🔎</span><input name="q" type="search" placeholder="ابحث باسم العقار أو المنطقة"></div>
+        <div class="input-group with-label"><label>المدينة</label><select name="city" class="city-select"></select></div>
+        <div class="input-group with-label"><label>نوع العقار</label><select name="type" class="type-select"></select></div>
+        <div class="input-group with-label"><label>نوع العملية</label><select name="purpose"><option value="">الكل</option><option value="بيع">بيع</option><option value="إيجار">إيجار</option></select></div>
+        <div class="input-group with-label"><label>السعر الأقصى</label><input name="maxPrice" type="number" min="0" placeholder="مثال: 5000000"></div>
+        <button class="btn btn-primary" type="submit">تصفية</button>
+      </form>
+    </div>
+
+    <section class="section soft">
+      <div class="container properties-layout">
+        <div>
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">قائمة العقارات</span>
+              <h2 class="section-title">اختر العقار الأنسب لك</h2>
+            </div>
+            <div class="input-group with-label" style="width:220px;max-width:100%">
+              <label>ترتيب حسب</label>
+              <select id="sortProperties">
+                <option value="default">الافتراضي</option>
+                <option value="low">الأقل سعرًا</option>
+                <option value="high">الأعلى سعرًا</option>
+                <option value="area">الأكبر مساحة</option>
+              </select>
+            </div>
+          </div>
+          <div id="propertiesGrid" class="properties-grid"></div>
+        </div>
+        <aside>
+          <div class="sidebar-card">
+            <h3>تواصل سريع</h3>
+            <div class="agent-box"><div class="agent-avatar">E</div><div><strong>مستشار EstateX</strong><span>جاهز لمساعدتك الآن</span></div></div>
+            <a class="btn btn-primary wa-link" href="#" style="width:100%">راسلنا على واتساب</a>
+          </div>
+          <div class="sidebar-card">
+            <h3>عقارات مقترحة</h3>
+            <div id="quickList" class="quick-list"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+ <div data-include="footer.html"></div>
+  <a href="#" class="float-whatsapp wa-link">💬</a>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/includes.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
